@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello | Felix</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+    
+    <main class="container">
+        <div class="card">
+            <header class="card-header">
+                <span class="badge">Day 1 Assignment</span>
+                <h1 class="title">Hello, I'm <span class="gradient-text">Felix</span>.</h1>
+            </header>
+            
+            <section class="card-body">
+                <p class="intro-text">
+                    Welcome to my personal corner of the web! This page marks the very beginning of my coding journey, created on the first day of my school assignment.
+                </p>
+                <p class="sub-text">
+                    I am excited to learn how to design, build, and deploy websites while discovering the power of modern web technologies.
+                </p>
+            </section>
+            
+            <footer class="card-footer">
+                <div class="interactive-area">
+                    <button id="interactive-btn" class="btn">
+                        <span>Click for a Fun Fact</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                    </button>
+                    <p id="fun-fact" class="fun-fact-text hidden">
+                        💡 Fun Fact: This page was built using semantic HTML5, custom CSS gradients, and responsive glassmorphism styles!
+                    </p>
+                </div>
+                
+                <div class="divider"></div>
+                <p class="copyright">&copy; 2026 Felix. All rights reserved.</p>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('interactive-btn');
+            const fact = document.getElementById('fun-fact');
+            
+            btn.addEventListener('click', () => {
+                fact.classList.toggle('hidden');
+                if (!fact.classList.contains('hidden')) {
+                    fact.style.animation = 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+                    btn.querySelector('span').textContent = 'Hide Fun Fact';
+                } else {
+                    btn.querySelector('span').textContent = 'Click for a Fun Fact';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
