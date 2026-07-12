@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item Display</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+    }
+
+    .container {
+        width: 500px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    select {
+        width: 250px;
+        padding: 8px;
+        margin-bottom: 20px;
+    }
+
+    .item-info p {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Item Display</h1>
+
+    <select id="itemSelect">
+        <option value="">-- Select Item --</option>
+    </select>
+
+    <div class="item-info">
+        <p><strong>ID:</strong> <span id="id"></span></p>
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Category:</strong> <span id="category"></span></p>
+        <p><strong>Inventory Amt.:</strong> <span id="inventory"></span></p>
+        <p><strong>List Price:</strong> <span id="price"></span></p>
+    </div>
+</div>
+
+<script>
+const items = [
+    { id: 1, name: "Mouse", category: "Electronics", inventory: 100, price: 250 },
+    { id: 2, name: "Keyboard", category: "Electronics", inventory: 80, price: 500 },
+    { id: 3, name: "Monitor", category: "Electronics", inventory: 30, price: 4500 },
+    { id: 4, name: "USB Cable", category: "Accessories", inventory: 200, price: 100 },
+    { id: 5, name: "Notebook", category: "Stationery", inventory: 500, price: 55 },
+    { id: 6, name: "Pen", category: "Stationery", inventory: 300, price: 20 },
+    { id: 7, name: "Desk Lamp", category: "Home", inventory: 50, price: 700 },
+    { id: 8, name: "Water Bottle", category: "Home", inventory: 120, price: 150 },
+    { id: 9, name: "Backpack", category: "Bags", inventory: 60, price: 800 },
+    { id: 10, name: "Phone Stand", category: "Accessories", inventory: 90, price: 180 },
+    { id: 11, name: "Headphones", category: "Electronics", inventory: 40, price: 1200 }
+];
+
+const select = document.getElementById("itemSelect");
+
+// Create options from items array
+items.forEach(item => {
+    const option = document.createElement("option");
+    option.value = item.id;
+    option.textContent = item.name;
+    select.appendChild(option);
+});
+
+// Display selected item
+select.addEventListener("change", function () {
+    const selectedId = Number(this.value);
+    const item = items.find(i => i.id === selectedId);
+
+    if (!item) {
+        document.getElementById("id").textContent = "";
+        document.getElementById("name").textContent = "";
+        document.getElementById("category").textContent = "";
+        document.getElementById("inventory").textContent = "";
+        document.getElementById("price").textContent = "";
+        return;
+    }
+
+    document.getElementById("id").textContent = item.id;
+    document.getElementById("name").textContent = item.name;
+    document.getElementById("category").textContent = item.category;
+    document.getElementById("inventory").textContent = item.inventory;
+    document.getElementById("price").textContent = item.price;
+});
+</script>
+
+</body>
+</html>

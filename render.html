@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Form Render</title>
+<link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+ 
+<div class="container">
+ 
+<form action="https://teach-backend-fawn.vercel.app/api/product"
+
+      method="POST"
+
+      enctype="multipart/form-data">
+ 
+    <fieldset>
+<legend>General Info</legend>
+ 
+        <div class="row">
+<label>Item Name</label>
+<input type="text" name="itemName">
+</div>
+ 
+        <div class="row">
+<label>Description</label>
+<textarea name="itemDescription"></textarea>
+</div>
+ 
+        <div class="row">
+<label>Category</label>
+ 
+            <select name="category">
+<option value="notSpecified">notSpecified</option>
+<option value="consumption">consumption</option>
+<option value="household">household</option>
+<option value="electronic">electronic</option>
+<option value="gadget">gadget</option>
+</select>
+</div>
+ 
+    </fieldset>
+ 
+ 
+    <fieldset>
+ 
+        <legend>Misc.</legend>
+ 
+        <div class="row">
+<label>Inventory Amount</label>
+<input type="number" name="inventoryAmount">
+</div>
+ 
+        <div class="row">
+<label>List Price</label>
+<input type="number" name="listPrice">
+</div>
+ 
+        <div class="row">
+<label>Available Stores</label>
+ 
+            <div class="inline">
+<label><input type="checkbox" name="availableStore[]" value="Bangkok"> Bangkok</label>
+ 
+                <label><input type="checkbox" name="availableStore[]" value="Pattaya"> Pattaya</label>
+ 
+                <label><input type="checkbox" name="availableStore[]" value="Phuket"> Phuket</label>
+</div>
+ 
+        </div>
+ 
+        <div class="row">
+<label>Status</label>
+ 
+            <div class="inline">
+ 
+                <label>
+<input type="radio" name="status" value="Active">
+
+                    Active
+</label>
+ 
+                <label>
+<input type="radio" name="status" value="Inactive">
+
+                    Inactive
+</label>
+ 
+            </div>
+ 
+        </div>
+ 
+    </fieldset>
+ 
+    <fieldset>
+ 
+        <legend>Staff</legend>
+ 
+        <div class="row">
+<label>Staff Email</label>
+ 
+            <input type="email" name="staffEmail" required>
+ 
+        </div>
+ 
+    </fieldset>
+ 
+    <div class="button-area">
+<button type="submit">Submit Form</button>
+</div>
+ 
+</form>
+ 
+</div>
+ 
+</body>
+</html>
+ 

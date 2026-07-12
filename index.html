@@ -3,67 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello | Felix</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <title>Felix - Personal Profile</title>
+    <meta name="description" content="Personal profile webpage of Felix - Software Developer. Contains about me, hobbies, and technical skills list.">
 </head>
-<body>
-    <div class="background-animation">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-    </div>
-    
-    <main class="container">
-        <div class="card">
-            <header class="card-header">
-                <span class="badge">Day 1 Assignment</span>
-                <h1 class="title">Hello, I'm <span class="gradient-text">Felix</span>.</h1>
-            </header>
-            
-            <section class="card-body">
-                <p class="intro-text">
-                    Welcome to my personal corner of the web! This page marks the very beginning of my coding journey, created on the first day of my school assignment.
-                </p>
-                <p class="sub-text">
-                    I am excited to learn how to design, build, and deploy websites while discovering the power of modern web technologies.
-                </p>
-            </section>
-            
-            <footer class="card-footer">
-                <div class="interactive-area">
-                    <button id="interactive-btn" class="btn">
-                        <span>Click for a Fun Fact</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                    </button>
-                    <p id="fun-fact" class="fun-fact-text hidden">
-                        💡 Fun Fact: This page was built using semantic HTML5, custom CSS gradients, and responsive glassmorphism styles!
-                    </p>
-                </div>
-                
-                <div class="divider"></div>
-                <p class="copyright">&copy; 2026 Felix. All rights reserved.</p>
-            </footer>
-        </div>
-    </main>
+<body bgcolor="#f1f5f9" text="#334155" link="#4f46e5" alink="#6366f1" vlink="#4f46e5">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btn = document.getElementById('interactive-btn');
-            const fact = document.getElementById('fun-fact');
-            
-            btn.addEventListener('click', () => {
-                fact.classList.toggle('hidden');
-                if (!fact.classList.contains('hidden')) {
-                    fact.style.animation = 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards';
-                    btn.querySelector('span').textContent = 'Hide Fun Fact';
-                } else {
-                    btn.querySelector('span').textContent = 'Click for a Fun Fact';
-                }
-            });
-        });
-    </script>
+    <!-- Wrapper Table to create page padding and background -->
+    <table width="100%" border="0" cellpadding="40" cellspacing="0">
+        <tr>
+            <td align="center" valign="top">
+
+                <!-- Main Card Container -->
+                <table width="700" bgcolor="#ffffff" border="0" cellpadding="40" cellspacing="0">
+                    <tr>
+                        <td>
+
+                            <!-- Header Section (Name & Title) -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center">
+                                        <h1>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#1e293b" size="7">
+                                                Felix
+                                            </font>
+                                        </h1>
+                                        <h3>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#4f46e5" size="4">
+                                                SOFTWARE DEVELOPER &amp; TECH ENTHUSIAST
+                                            </font>
+                                        </h3>
+                                        <hr width="100%" size="2" color="#e2e8f0">
+                                        <br>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- About Me & Photo Section -->
+                            <table width="100%" border="0" cellpadding="10" cellspacing="0">
+                                <tr>
+                                    <!-- Profile Image Column -->
+                                    <td width="200" align="center" valign="top">
+                                        <img src="public/images/profile.svg" alt="Felix's Profile Avatar" width="180" height="180" border="0">
+                                    </td>
+                                    
+                                    <!-- Text Column -->
+                                    <td valign="top">
+                                        <h2>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#1e293b" size="5">
+                                                About Me
+                                            </font>
+                                        </h2>
+                                        <p>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                Hello! I'm Felix, a passionate software developer based in San Francisco. I specialize in building clean, user-friendly web interfaces and robust backend systems. I love learning new technologies, solving complex logical problems, and writing high-quality code.
+                                            </font>
+                                        </p>
+                                        <p>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                When I'm not writing code, you can find me exploring the outdoors, trying out new recipes, or diving into tech blogs and science fiction novels.
+                                            </font>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <br>
+                            <hr width="100%" size="1" color="#e2e8f0">
+                            <br>
+
+                            <!-- Hobbies Section -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <h2>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#1e293b" size="5">
+                                                My Hobbies
+                                            </font>
+                                        </h2>
+                                        <p>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                Here are some of the activities I enjoy during my free time:
+                                            </font>
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                    <b>Coding Side Projects:</b> Building small web tools and open-source contributions.
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                    <b>Hiking &amp; Exploring:</b> Reconnecting with nature on local trails and scenic routes.
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                    <b>Culinary Arts:</b> Experimenting with international recipes and baking sourdough bread.
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                    <b>Photography:</b> Capturing cityscapes and nature landscapes.
+                                                </font>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <br>
+                            <hr width="100%" size="1" color="#e2e8f0">
+                            <br>
+
+                            <!-- Skills Section -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <h2>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#1e293b" size="5">
+                                                Professional Skills
+                                            </font>
+                                        </h2>
+                                        <p>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                A brief overview of my core technology stack and proficiency levels:
+                                            </font>
+                                        </p>
+                                        
+                                        <!-- Skills Table -->
+                                        <table width="100%" border="1" bordercolor="#e2e8f0" cellpadding="12" cellspacing="0">
+                                            <thead>
+                                                <tr bgcolor="#4f46e5">
+                                                    <th align="left">
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#ffffff" size="3">
+                                                            Skill Name
+                                                        </font>
+                                                    </th>
+                                                    <th align="left">
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#ffffff" size="3">
+                                                            Proficiency Level
+                                                        </font>
+                                                    </th>
+                                                    <th align="center">
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#ffffff" size="3">
+                                                            Ranking (Stars)
+                                                        </font>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Row 1 -->
+                                                <tr bgcolor="#f8fafc">
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#334155" size="3">
+                                                            <b>HTML5 &amp; CSS3</b>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                            Expert
+                                                        </font>
+                                                    </td>
+                                                    <td align="center">
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#eab308" size="3">
+                                                            ⭐⭐⭐⭐⭐
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                                <!-- Row 2 -->
+                                                <tr>
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#334155" size="3">
+                                                            <b>JavaScript (ES6+)</b>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                            Expert
+                                                        </font>
+                                                    </td>
+                                                    <td align="center">
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#eab308" size="3">
+                                                            ⭐⭐⭐⭐⭐
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                                <!-- Row 3 -->
+                                                <tr bgcolor="#f8fafc">
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#334155" size="3">
+                                                            <b>Node.js &amp; Express</b>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                            Intermediate
+                                                        </font>
+                                                    </td>
+                                                    <td align="center">
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#eab308" size="3">
+                                                            ⭐⭐⭐⭐
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                                <!-- Row 4 -->
+                                                <tr>
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#334155" size="3">
+                                                            <b>Git &amp; Version Control</b>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                            Intermediate
+                                                        </font>
+                                                    </td>
+                                                    <td align="center">
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#eab308" size="3">
+                                                            ⭐⭐⭐⭐
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                                <!-- Row 5 -->
+                                                <tr bgcolor="#f8fafc">
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#334155" size="3">
+                                                            <b>Python</b>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#475569" size="3">
+                                                            Beginner
+                                                        </font>
+                                                    </td>
+                                                    <td align="center">
+                                                        <font face="system-ui, -apple-system, sans-serif" color="#eab308" size="3">
+                                                            ⭐⭐⭐
+                                                        </font>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <br>
+                            <hr width="100%" size="1" color="#e2e8f0">
+                            <br>
+
+                            <!-- Footer Section -->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center">
+                                        <p>
+                                            <font face="system-ui, -apple-system, sans-serif" color="#94a3b8" size="2">
+                                                &copy; 2026 Felix. All rights reserved. Created with pure HTML tags and attributes.
+                                            </font>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
 </body>
 </html>
